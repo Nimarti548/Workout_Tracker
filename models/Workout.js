@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const ExerciseSchema = new Schema({
+const workoutSchema = new Schema({
   day: {
     type: Date,
-    default: Day.now,
+    default: Date.now,
   },
 
-  exercise: [
+  exercises: [
     {
       name: {
         type: String,
@@ -38,6 +38,6 @@ const ExerciseSchema = new Schema({
   ],
 });
 
-const Exercise = mongoose.model("Exercise", ExerciseSchema);
+const Workout = mongoose.model("Workout", workoutSchema);
 
-module.exports = Exercise;
+module.exports = Workout;
